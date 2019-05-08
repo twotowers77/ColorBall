@@ -9,6 +9,8 @@ TagManager:
   - Monster
   - Ground
   - MonsterPrefabs
+  - eyes
+  - TimeLimit
   layers:
   - Default
   - TransparentFX

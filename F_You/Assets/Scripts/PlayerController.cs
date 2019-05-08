@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public GameObject ColorBallPrefabs;
     public GameObject player;
     public GameObject AimPoint;
+    public GameObject eyes; 
 
     void Start()
     {
@@ -42,12 +43,15 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>(); // Animatorコンポーネントはplayer objectの下位に存在するため、InChildren使用
         player = GameObject.FindGameObjectWithTag("Player");
         AimPoint = GameObject.FindGameObjectWithTag("AimPoint");
+        eyes = GameObject.FindGameObjectWithTag("eyes") ;
         m_Camera = Camera.main;//このCameraをMainCameraにする
         m_MouseRotate.Init(transform, m_Camera.transform);//MouseRotate.cs参照
         BtnController BC = GameObject.Find("Main Camera").GetComponent<BtnController>();
         //別シーン、別スクリプトの中にあるオブジェクトや変数などを使えるようになる。
         BC.paused = false;
         moveSpeed = walkSpeed;
+
+        
     }
 
     void Update()

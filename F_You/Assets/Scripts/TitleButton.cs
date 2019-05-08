@@ -22,4 +22,8 @@ public class TitleButton : MonoBehaviour
     {
         Application.Quit();
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) SceneManager.LoadScene("Title");
+    }
 }
