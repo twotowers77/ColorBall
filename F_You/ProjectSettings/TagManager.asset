@@ -11,6 +11,7 @@ TagManager:
   - MonsterPrefabs
   - eyes
   - TimeLimit
+  - ExitPoint
   layers:
   - Default
   - TransparentFX

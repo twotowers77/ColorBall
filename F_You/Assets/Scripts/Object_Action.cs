@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Object_Action : MonoBehaviour {
 
-    public float speed = 60f;
-    public float DestroyTime = 2.0f;
     private Transform _transform;
     GameObject player;
     Rigidbody rigdbody;
     Vector3 forceDirection;
+
+    public float speed = 1000f;
+    public float DestroyTime = 3.0f;
 
     ////////////////////[Override function]/////////////////////////
     void Awake()
@@ -32,7 +33,6 @@ public class Object_Action : MonoBehaviour {
             forceDirection.x = player.transform.position.x > forceDirection.x ? -3f : 3f;// 基本形式   (条件) ? (条件がTrueの時実行) : (条件がfalseのとき実行) 区分は？と：を使う
             forceDirection.y = 0;
             forceDirection.z = player.transform.position.z > forceDirection.z ? -3f : 3f;
-
 
             rigdbody.AddForce(forceDirection * speed, ForceMode.Impulse);
         }

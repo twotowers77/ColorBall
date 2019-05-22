@@ -6,22 +6,33 @@ public class EnemyController : MonoBehaviour
 {
     public enum CurrentState { idle, runAway, attack, dead }; //列挙型"状態"変数
     public CurrentState curState = CurrentState.idle;
+    GameObject[] ExitPoints;
+    Transform[] ExitPointTrans;
+    float[] Dist;
+
 
     private Transform _transform;
     private Transform targetTransform;
     private NavMeshAgent nvAgent;
 
-    public float traceDist = 15.0f;//追跡射程
     public bool isDead = false;//死亡有無
+    private int targetInt = 0;
     private int LifeCount = 0; 
-    // Start is called before the first frame update
+    
     void Start()
     {
-        _transform = this.gameObject.GetComponent<Transform>();
-        targetTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        ExitPoints = GameObject.FindGameObjectsWithTag("ExitPoint");
+        ExitPointTrans = new Transform[ExitPoints.Length];
+        Dist = new float[ExitPoints.Length];
+        
         nvAgent = this.gameObject.GetComponent<NavMeshAgent>();
 
-
+        for( int i = 0; i < ExitPoints.Length; i++)
+        {
+            ExitPointTrans[i] = ExitPoints[i].GetComponent<Transform>();
+        }
+        targetTransform = ExitPointTrans[0];
+        StartCoroutine(SearchTarget());
 
         //アニメーション適用後に使用することそれぞれの状態をアニメーション設定する必要がある。
         //StartCoroutine(this.CheckState());
@@ -29,8 +40,40 @@ public class EnemyController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //追跡対象の位置を設定するとすぐ追跡スタート
-        nvAgent.destination = targetTransform.position;
+        //追跡対象の位置を設定するとすぐ追跡スタート (変わる前）
+       // nvAgent.destination = targetTransform.position;
+    }
+
+    IEnumerator SearchTarget()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.2f);
+            for (int i = 0; i < ExitPoints.Length; i++)
+            {
+                Dist[i] = Mathf.Abs(Vector3.Distance(ExitPointTrans[i].position, transform.position));
+            }
+            targetTransform = ExitPointTrans[0];
+
+            if (ExitPoints.Length == 1) { }
+            else
+            {
+                for (int i = 0; i < ExitPoints.Length - 1; i++)
+                {
+                    if (Dist[targetInt] <= Dist[i + 1])
+                    {
+                        targetTransform = ExitPointTrans[targetInt];
+                    }
+                    else
+                    {
+                        targetInt = i + 1;
+                        targetTransform = ExitPointTrans[targetInt];
+                    }
+                }
+            }
+            nvAgent.destination = targetTransform.position;
+            targetInt = 0;
+        }
     }
     /*
     IEnumerator CheckState()

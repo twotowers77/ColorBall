@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6402543267381683142}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 143.5, y: 16.4, z: 151.94}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 16, y: 16, z: 16}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,7 +124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curState: 0
-  traceDist: 15
   isDead: 0
 --- !u!195 &6402543267381683192
 NavMeshAgent:

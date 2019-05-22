@@ -1,0 +1,215 @@
+fileFormatVersion: 2
+guid: b630c88416316d94c9f36bd7cbbcabd2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone_001
+    100006: Bone_002
+    100008: Bone_002_L
+    100010: Bone_002_R
+    100012: Bone_003
+    100014: Bone_004
+    100016: Bone_004_L
+    100018: Bone_004_L_001
+    100020: Bone_004_L_002
+    100022: Bone_004_L_003
+    100024: Bone_004_R
+    100026: Bone_004_R_001
+    100028: Bone_004_R_002
+    100030: Bone_004_R_003
+    100032: Bone_L
+    100034: Bone_L_001
+    100036: Bone_L_002
+    100038: Bone_L_003
+    100040: Bone_L_004
+    100042: Bone_R
+    100044: Bone_R_001
+    100046: Bone_R_002
+    100048: Bone_R_003
+    100050: Bone_R_004
+    100052: Cube
+    100054: Cube_001
+    100056: Sphere
+    100058: Sphere_001
+    100060: Sphere_002
+    100062: Sphere_003
+    100064: Sphere_004
+    100066: Sphere_005
+    100068: Sphere_006
+    100070: Sphere_007
+    100072: Sphere_008
+    100074: //RootNode
+    400000: Armature
+    400002: Bone
+    400004: Bone_001
+    400006: Bone_002
+    400008: Bone_002_L
+    400010: Bone_002_R
+    400012: Bone_003
+    400014: Bone_004
+    400016: Bone_004_L
+    400018: Bone_004_L_001
+    400020: Bone_004_L_002
+    400022: Bone_004_L_003
+    400024: Bone_004_R
+    400026: Bone_004_R_001
+    400028: Bone_004_R_002
+    400030: Bone_004_R_003
+    400032: Bone_L
+    400034: Bone_L_001
+    400036: Bone_L_002
+    400038: Bone_L_003
+    400040: Bone_L_004
+    400042: Bone_R
+    400044: Bone_R_001
+    400046: Bone_R_002
+    400048: Bone_R_003
+    400050: Bone_R_004
+    400052: Cube
+    400054: Cube_001
+    400056: Sphere
+    400058: Sphere_001
+    400060: Sphere_002
+    400062: Sphere_003
+    400064: Sphere_004
+    400066: Sphere_005
+    400068: Sphere_006
+    400070: Sphere_007
+    400072: Sphere_008
+    400074: //RootNode
+    2100000: Material_012
+    2100002: Material_011
+    2100004: Material_010
+    2100006: Material_009
+    2100008: Material_008
+    2100010: Material_006
+    2100012: Material_005
+    2100014: Material_007
+    2100016: Material_004
+    2100018: Material_003
+    2100020: Material_002
+    2100022: Material_001
+    2100024: Material
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Sphere
+    2300006: Sphere_001
+    2300008: Sphere_002
+    2300010: Sphere_003
+    2300012: Sphere_004
+    2300014: Sphere_005
+    2300016: Sphere_006
+    2300018: Sphere_007
+    2300020: Sphere_008
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Sphere
+    3300006: Sphere_001
+    3300008: Sphere_002
+    3300010: Sphere_003
+    3300012: Sphere_004
+    3300014: Sphere_005
+    3300016: Sphere_006
+    3300018: Sphere_007
+    3300020: Sphere_008
+    4300000: Sphere_008
+    4300002: Sphere_007
+    4300004: Cube_001
+    4300006: Cube
+    4300008: Sphere_006
+    4300010: Sphere_005
+    4300012: Sphere_004
+    4300014: Sphere_003
+    4300016: Sphere_002
+    4300018: Sphere_001
+    4300020: Sphere
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    //Resource 
+    public AudioClip AttackSE;
+    AudioSource shotSE;
+
+    //Object
     private Animator _animator;
     private Transform _transform;
     private float _horizontal = 0.0f; //初期化
@@ -35,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        shotSE = GetComponent<AudioSource>();
         _transform = GetComponent<Transform>(); //コンポーネントを変数に割当
         rigdbody = GetComponent<Rigidbody>();
         jumpCount = 1;　//JumpMax
@@ -91,12 +97,14 @@ public class PlayerController : MonoBehaviour
             }
             if (Input.GetMouseButtonDown(0))
             {
+                shotSE.PlayOneShot(AttackSE);
                 ColorBallShoot();
             }
-            if (Input.GetMouseButton(1))
-            {
-                ColorBallShoot();
-            }
+            //if (Input.GetMouseButton(1))
+            //{
+            //    shotSE.PlayOneShot(AttackSE);
+            //    ColorBallShoot();
+            //}
         }
         if (BC.paused == false)
         {
@@ -145,7 +153,7 @@ public class PlayerController : MonoBehaviour
         GameObject instantItem = (GameObject)Instantiate(ColorBallPrefabs, AimPoint.transform.position, AimPoint.transform.rotation);
 
         Rigidbody rigidbody = instantItem.GetComponent<Rigidbody>();
-        rigidbody.AddForce(AimPoint.transform.forward * 100f, ForceMode.Impulse);
+        rigidbody.AddForce(AimPoint.transform.forward * 500f, ForceMode.Impulse);
         /*if (Physics.Raycast(AimPoint.transform.position, AimPoint.transform.forward, out hit, range))
         {
             GameObject CBE = (GameObject)Instantiate(ColorBallPrefabs, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));

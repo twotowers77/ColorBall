@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class BtnController : MonoBehaviour
 {
+    public AudioClip SE;
+    AudioSource buttonSE;
     public GameObject PauseUI;
     public bool paused = false;
 
     // Start is called before the first frame update
     void Start() {
         PauseUI.SetActive(false);
+        buttonSE = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -28,6 +31,10 @@ public class BtnController : MonoBehaviour
             PauseUI.SetActive(false);
             Time.timeScale = 1f;
         }
+    }
+    public void PlaySE()
+    {
+        buttonSE.PlayOneShot(SE);
     }
     public void Resume()
     {

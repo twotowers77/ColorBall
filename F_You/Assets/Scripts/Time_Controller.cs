@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-////////////////////////////////////////////////////////
-//ゲームの結果のシーンや何かを作る前までの仮のデータ参照
 using UnityEngine.SceneManagement;
-////////////////////////////////////////////////////////
 
 public class Time_Controller : MonoBehaviour{
 
+    public GameObject ResultGameUI;
+    public bool stopGame = false;
     public float LimitTime;
     public Text text_Timer;
 
     void Start()
     {
         LimitTime = 60;
+        ResultGameUI.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -22,10 +22,29 @@ public class Time_Controller : MonoBehaviour{
         LimitTime -= Time.deltaTime;
         text_Timer.text = "Time : " + Mathf.Round(LimitTime);
         ////////////////////////////////////////////////////////
-            //ゲームの結果のシーンや何かを作る前までの仮のデータ参照
+
         if (LimitTime <= 0) {
-            SceneManager.LoadScene("Title");
+            stopGame = true;
+            LimitTime = 0;
         }
-        ////////////////////////////////////////////////////////
+        if (stopGame)
+        {
+            ResultGameUI.SetActive(true);
+            Time.timeScale = 0;
+        }
+        if (!stopGame)
+        {
+            ResultGameUI.SetActive(false);
+            Time.timeScale = 1f;
+        }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene("GameScenes");
+    }
+    public void TitleMenu()
+    {
+        SceneManager.LoadScene("Title");
     }
 }
