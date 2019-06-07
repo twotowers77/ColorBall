@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 手てて
+/// </summary>
 public class CreateEnemy : MonoBehaviour
 {
     public Transform[] points;
